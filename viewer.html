@@ -1,14 +1,26 @@
 <html>
 	<body>
-		<script type="module" src="stl-viewer.js"></script>
+		<script src="js/stl_viewer.min.js"></script>
+		<div style="width: 100vw; height: 100vh" id="stl_cont"></div>
 		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				const urlParams = new URLSearchParams(window.location.search);
-				const model = urlParams.get("model") || "default.stl";
-				const stlViewer = document.createElement("stl-viewer");
-				stlViewer.setAttribute("model", "models/" + model);
-				document.body.appendChild(stlViewer);
-			});
+			function getParameterByName(name) {
+				name = name.replace(/[\[\]]/g, "\\$&");
+				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+					results = regex.exec(window.location.href);
+				if (!results) return null;
+				if (!results[2]) return "";
+				return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+
+			var modelFilename = getParameterByName("model") || "model1.stl";
+
+			var stl_viewer = new StlViewer(
+				document.getElementById("stl_cont"),
+				{
+					auto_rotate: true,
+					models: [{ id: 0, filename: "/models/" + modelFilename }],
+				},
+			);
 		</script>
 	</body>
 </html>
