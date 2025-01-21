@@ -1,0 +1,14 @@
+<html>
+	<body>
+		<script type="module" src="stl-viewer.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const urlParams = new URLSearchParams(window.location.search);
+				const model = urlParams.get("model") || "default.stl";
+				const stlViewer = document.createElement("stl-viewer");
+				stlViewer.setAttribute("model", "models/" + model);
+				document.body.appendChild(stlViewer);
+			});
+		</script>
+	</body>
+</html>

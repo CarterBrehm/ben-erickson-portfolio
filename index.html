@@ -1,48 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ben Erickson's Design Portfolio">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Ben Erickson</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            font-weight: bold;
-            font-size: calc(10px + 10vmin);
-        }
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #454545;
-                color: #F8F8FF;
-                transition: background-color 0.5s ease-in-out;
-                -webkit-transition: background-color 0.5s ease-in-out;
-                -moz-transition: background-color 0.5s ease-in-out;
-                -o-transition: background-color 0.5s ease-in-out;
-                -ms-transition: background-color 0.5s ease-in-out;
-            }
-        }
-        @media (prefers-color-scheme: light) {
-            body {
-                background-color: #F8F8FF;
-                color: #454545;
-                transition: background-color 0.5s ease-in-out;
-                -webkit-transition: background-color 0.5s ease-in-out;
-                -moz-transition: background-color 0.5s ease-in-out;
-                -o-transition: background-color 0.5s ease-in-out;
-                -ms-transition: background-color 0.5s ease-in-out;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div>
-        Ben Erickson
-    </div>
-</body>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Ben Erickson's Design Portfolio" />
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent"
+		/>
+		<title>Ben Erickson</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				flex-direction: column;
+				height: 100vh;
+				margin: 0;
+				font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial,
+					"Noto Sans", sans-serif, "Apple Color Emoji",
+					"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+				font-weight: bold;
+				font-size: calc(10px + 10vmin);
+				overflow-y: auto;
+			}
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #454545;
+					color: #f8f8ff;
+					transition: background-color 0.5s ease-in-out;
+					-webkit-transition: background-color 0.5s ease-in-out;
+					-moz-transition: background-color 0.5s ease-in-out;
+					-o-transition: background-color 0.5s ease-in-out;
+					-ms-transition: background-color 0.5s ease-in-out;
+				}
+			}
+			@media (prefers-color-scheme: light) {
+				body {
+					background-color: #f8f8ff;
+					color: #454545;
+					transition: background-color 0.5s ease-in-out;
+					-webkit-transition: background-color 0.5s ease-in-out;
+					-moz-transition: background-color 0.5s ease-in-out;
+					-o-transition: background-color 0.5s ease-in-out;
+					-ms-transition: background-color 0.5s ease-in-out;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="hero">Ben Erickson</div>
+		<ul>
+			<li><a href="viewer.html?model=model1.stl">model1</a></li>
+			<li><a href="viewer.html?model=model2.stl">model2</a></li>
+			<li><a href="viewer.html?model=model3.stl">model3</a></li>
+			<li><a href="viewer.html?model=model4.stl">model4</a></li>
+			<li><a href="viewer.html?model=model5.stl">model5</a></li>
+			<li><a href="viewer.html?model=model6.stl">model6</a></li>
+		</ul>
+	</body>
 </html>
