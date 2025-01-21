@@ -10,16 +10,12 @@
 		<title>Ben Erickson</title>
 		<style>
 			a {
-				color: #000000;
+				color: inherit;
 				text-decoration: none;
-			}
-			li {
-				list-style-type: none;
-				margin-left: -1em;
 			}
 			body {
 				display: flex;
-				justify-content: flex-start;
+				justify-content: center;
 				align-items: center;
 				flex-direction: column;
 				height: 100vh;
@@ -30,6 +26,19 @@
 				font-weight: bold;
 				font-size: calc(10px + 10vmin);
 				overflow-y: auto;
+			}
+			.hero {
+				margin-bottom: 20px;
+			}
+			ul {
+				display: flex;
+				justify-content: center;
+				padding: 0;
+				list-style-type: none;
+				margin: 10px 0;
+			}
+			ul li {
+				margin: 0 10px;
 			}
 			@media (prefers-color-scheme: dark) {
 				body {
@@ -58,12 +67,20 @@
 	<body>
 		<div class="hero">Ben Erickson</div>
 		<ul>
-			<li><a href="viewer.html?model=model1.stl">model1</a></li>
-			<li><a href="viewer.html?model=model2.stl">model2</a></li>
-			<li><a href="viewer.html?model=model3.stl">model3</a></li>
-			<li><a href="viewer.html?model=model4.stl">model4</a></li>
-			<li><a href="viewer.html?model=model5.stl">model5</a></li>
-			<li><a href="viewer.html?model=model6.stl">model6</a></li>
+			<li><a href="viewer.html?model=model1.stl">1</a></li>
+			<li><a href="viewer.html?model=model2.stl">2</a></li>
+			<li><a href="viewer.html?model=model3.stl">3</a></li>
+			<li><a href="viewer.html?model=model4.stl">4</a></li>
+			<li><a href="viewer.html?model=model5.stl">5</a></li>
+			<li><a href="viewer.html?model=model6.stl">6</a></li>
+		</ul>
+		<ul>
+			<li><a href="showcase/A/">A</a></li>
+			<li><a href="showcase/B/">B</a></li>
+			<li><a href="showcase/C/">C</a></li>
+			<li><a href="showcase/D/">D</a></li>
+			<li><a href="showcase/E/">E</a></li>
+			<li><a href="showcase/F/">F</a></li>
 		</ul>
 	</body>
 </html>
