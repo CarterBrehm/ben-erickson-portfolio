@@ -81,7 +81,7 @@
 					opacity: 1;
 				}
 			}
-			
+
 			/* Mobile - show hover state when centered */
 			@media (hover: none) {
 				.square.in-view::before {
@@ -89,12 +89,6 @@
 				}
 				.square.in-view::after {
 					opacity: 1;
-				}
-			}
-			@media (min-width: 1200px) {
-				.square {
-					width: calc((60vh - 120px) / 3);
-					height: calc((60vh - 120px) / 3);
 				}
 			}
 			ul {
@@ -182,39 +176,46 @@
 			});
 
 			// Only setup mobile hover effect on touch devices
-			if (window.matchMedia('(hover: none)').matches) {
-				const container = document.querySelector('.squares-container');
-				const squares = document.querySelectorAll('.square');
-				
+			if (window.matchMedia("(hover: none)").matches) {
+				const container = document.querySelector(".squares-container");
+				const squares = document.querySelectorAll(".square");
+
 				function updateCenteredSquare() {
 					const containerRect = container.getBoundingClientRect();
-					const containerCenter = containerRect.left + (containerRect.width / 2);
-					
-					squares.forEach(square => {
+					const containerCenter =
+						containerRect.left + containerRect.width / 2;
+
+					squares.forEach((square) => {
 						const rect = square.getBoundingClientRect();
-						const squareCenter = rect.left + (rect.width / 2);
-						const distanceFromCenter = Math.abs(containerCenter - squareCenter);
-						
+						const squareCenter = rect.left + rect.width / 2;
+						const distanceFromCenter = Math.abs(
+							containerCenter - squareCenter,
+						);
+
 						if (distanceFromCenter < rect.width / 3) {
-							square.classList.add('in-view');
+							square.classList.add("in-view");
 						} else {
-							square.classList.remove('in-view');
+							square.classList.remove("in-view");
 						}
 					});
 				}
 
 				// Update on scroll
-				container.addEventListener('scroll', updateCenteredSquare);
+				container.addEventListener("scroll", updateCenteredSquare);
 				// Initial check
 				updateCenteredSquare();
 			}
 
 			// Handle mousewheel scrolling for the carousel
-			const container = document.querySelector('.squares-container');
-			container.addEventListener('wheel', (e) => {
-				e.preventDefault();
-				container.scrollLeft += e.deltaY;
-			}, { passive: false });
+			const container = document.querySelector(".squares-container");
+			container.addEventListener(
+				"wheel",
+				(e) => {
+					e.preventDefault();
+					container.scrollLeft += e.deltaY;
+				},
+				{ passive: false },
+			);
 		</script>
 	</body>
 </html>
