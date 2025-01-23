@@ -181,39 +181,32 @@
 				document.head.appendChild(style);
 			});
 
-			// Only setup intersection observer on mobile
+			// Only setup mobile hover effect on touch devices
 			if (window.matchMedia('(hover: none)').matches) {
-				const observer = new IntersectionObserver(
-					(entries) => {
-						entries.forEach((entry) => {
-							// Calculate how centered the element is
-							if (entry.isIntersecting) {
-								const rect = entry.target.getBoundingClientRect();
-								const viewportCenter = window.innerWidth / 2;
-								const elementCenter = rect.left + rect.width / 2;
-								const distanceFromCenter = Math.abs(viewportCenter - elementCenter);
-								
-								// If element is roughly centered (within 50px)
-								if (distanceFromCenter < 50) {
-									entry.target.classList.add('in-view');
-								} else {
-									entry.target.classList.remove('in-view');
-								}
-							} else {
-								entry.target.classList.remove('in-view');
-							}
-						});
-					},
-					{
-						threshold: [0, 0.25, 0.5, 0.75, 1],
-						rootMargin: '-20% 0px'
-					}
-				);
+				const container = document.querySelector('.squares-container');
+				const squares = document.querySelectorAll('.square');
+				
+				function updateCenteredSquare() {
+					const containerRect = container.getBoundingClientRect();
+					const containerCenter = containerRect.left + (containerRect.width / 2);
+					
+					squares.forEach(square => {
+						const rect = square.getBoundingClientRect();
+						const squareCenter = rect.left + (rect.width / 2);
+						const distanceFromCenter = Math.abs(containerCenter - squareCenter);
+						
+						if (distanceFromCenter < rect.width / 3) {
+							square.classList.add('in-view');
+						} else {
+							square.classList.remove('in-view');
+						}
+					});
+				}
 
-				// Observe all squares
-				document.querySelectorAll('.square').forEach((square) => {
-					observer.observe(square);
-				});
+				// Update on scroll
+				container.addEventListener('scroll', updateCenteredSquare);
+				// Initial check
+				updateCenteredSquare();
 			}
 		</script>
 	</body>
