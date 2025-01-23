@@ -29,7 +29,11 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				font-size: calc(10px + 8vmin);
+			}
+			.hero img {
+				height: 50%;
+				width: auto;
+				object-fit: contain;
 			}
 			.squares-container {
 				height: 60vh;
@@ -126,7 +130,9 @@
 		</style>
 	</head>
 	<body>
-		<div class="hero">Ben Erickson</div>
+		<div class="hero">
+			<img src="img/signature.png" alt="Ben Erickson signature" />
+		</div>
 		<div class="squares-container">
 			<a href="showcase/A/">
 				<div
