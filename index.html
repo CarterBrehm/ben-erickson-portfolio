@@ -73,11 +73,23 @@
 				opacity: 0;
 				transition: opacity 0.5s ease;
 			}
-			.square:hover::before {
-				opacity: 0;
+			@media (hover: hover) {
+				.square:hover::before {
+					opacity: 0;
+				}
+				.square:hover::after {
+					opacity: 1;
+				}
 			}
-			.square:hover::after {
-				opacity: 1;
+			
+			/* Mobile - show hover state when centered */
+			@media (hover: none) {
+				.square.in-view::before {
+					opacity: 0;
+				}
+				.square.in-view::after {
+					opacity: 1;
+				}
 			}
 			@media (min-width: 1200px) {
 				.square {
@@ -168,6 +180,41 @@
 				`;
 				document.head.appendChild(style);
 			});
+
+			// Only setup intersection observer on mobile
+			if (window.matchMedia('(hover: none)').matches) {
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							// Calculate how centered the element is
+							if (entry.isIntersecting) {
+								const rect = entry.target.getBoundingClientRect();
+								const viewportCenter = window.innerWidth / 2;
+								const elementCenter = rect.left + rect.width / 2;
+								const distanceFromCenter = Math.abs(viewportCenter - elementCenter);
+								
+								// If element is roughly centered (within 50px)
+								if (distanceFromCenter < 50) {
+									entry.target.classList.add('in-view');
+								} else {
+									entry.target.classList.remove('in-view');
+								}
+							} else {
+								entry.target.classList.remove('in-view');
+							}
+						});
+					},
+					{
+						threshold: 0.8,
+						root: document.querySelector('.squares-container')
+					}
+				);
+
+				// Observe all squares
+				document.querySelectorAll('.square').forEach((square) => {
+					observer.observe(square);
+				});
+			}
 		</script>
 	</body>
 </html>
