@@ -2,6 +2,10 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			type="module"
+			src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+		></script>
 		<meta name="description" content="Ben Erickson's Design Portfolio" />
 		<meta
 			name="apple-mobile-web-app-status-bar-style"
@@ -242,17 +246,6 @@
 				// Initial check
 				updateCenteredSquare();
 			}
-
-			// Handle mousewheel scrolling for the carousel
-			const container = document.querySelector(".squares-container");
-			container.addEventListener(
-				"wheel",
-				(e) => {
-					e.preventDefault();
-					container.scrollLeft += e.deltaY;
-				},
-				{ passive: false },
-			);
 		</script>
 	</body>
 </html>
