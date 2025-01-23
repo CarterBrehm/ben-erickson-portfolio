@@ -48,6 +48,8 @@
 				border-radius: 8px;
 				max-width: calc(60vh - 40px);
 				max-height: calc(60vh - 40px);
+				transition: background-image 0.3s ease;
+				cursor: pointer;
 			}
 			@media (min-width: 1200px) {
 				.square {
@@ -117,5 +119,19 @@
 				style="background-image: url(&quot;squares/fs1.jpg&quot;)"
 			></div>
 		</div>
+		<script>
+			document.querySelectorAll('.square').forEach(square => {
+				const originalImage = square.style.backgroundImage;
+				const hoverImage = originalImage.replace('s1', 's2');
+				
+				square.addEventListener('mouseenter', () => {
+					square.style.backgroundImage = hoverImage;
+				});
+				
+				square.addEventListener('mouseleave', () => {
+					square.style.backgroundImage = originalImage;
+				});
+			});
+		</script>
 	</body>
 </html>
