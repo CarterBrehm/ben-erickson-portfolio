@@ -208,6 +208,13 @@
 				// Initial check
 				updateCenteredSquare();
 			}
+
+			// Handle mousewheel scrolling for the carousel
+			const container = document.querySelector('.squares-container');
+			container.addEventListener('wheel', (e) => {
+				e.preventDefault();
+				container.scrollLeft += e.deltaY;
+			}, { passive: false });
 		</script>
 	</body>
 </html>
