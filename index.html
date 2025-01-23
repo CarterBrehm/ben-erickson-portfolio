@@ -51,7 +51,7 @@
 				overflow: hidden;
 			}
 			.square::before {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -62,7 +62,7 @@
 				transition: opacity 0.5s ease;
 			}
 			.square::after {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -140,7 +140,7 @@
 			></div>
 			<div
 				class="square"
-				style="background-image: url(&quot;squares/es1.jgp&quot;)"
+				style="background-image: url(&quot;squares/es1.jpg&quot;)"
 			></div>
 			<div
 				class="square"
@@ -148,17 +148,19 @@
 			></div>
 		</div>
 		<script>
-			document.querySelectorAll('.square').forEach(square => {
-				const originalImage = square.style.backgroundImage.match(/url\("([^"]+)"\)/)[1];
-				const hoverImage = originalImage.replace('s1', 's2');
-				
-				square.style.backgroundImage = '';  // Clear the direct background
-				square.style.setProperty('--image1', `url("${originalImage}")`);
-				square.style.setProperty('--image2', `url("${hoverImage}")`);
-				
+			document.querySelectorAll(".square").forEach((square) => {
+				const originalImage =
+					square.style.backgroundImage.match(/url\("([^"]+)"\)/)[1];
+				const hoverImage = originalImage.replace("s1", "s2");
+
+				square.style.backgroundImage = ""; // Clear the direct background
+				square.style.setProperty("--image1", `url("${originalImage}")`);
+				square.style.setProperty("--image2", `url("${hoverImage}")`);
+
 				// Set the background images on pseudo-elements
-				const style = document.createElement('style');
-				const squareId = 'square-' + Math.random().toString(36).substr(2, 9);
+				const style = document.createElement("style");
+				const squareId =
+					"square-" + Math.random().toString(36).substr(2, 9);
 				square.id = squareId;
 				style.textContent = `
 					#${squareId}::before { background-image: var(--image1); }
