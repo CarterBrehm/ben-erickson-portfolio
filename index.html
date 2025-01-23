@@ -43,13 +43,41 @@
 				flex: 0 0 auto;
 				width: calc(100vw - 40px);
 				height: calc(100vw - 40px);
-				background-size: cover;
-				background-position: center;
 				border-radius: 8px;
 				max-width: calc(60vh - 40px);
 				max-height: calc(60vh - 40px);
-				transition: background-image 0.3s ease;
 				cursor: pointer;
+				position: relative;
+				overflow: hidden;
+			}
+			.square::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-size: cover;
+				background-position: center;
+				transition: opacity 0.5s ease;
+			}
+			.square::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-size: cover;
+				background-position: center;
+				opacity: 0;
+				transition: opacity 0.5s ease;
+			}
+			.square:hover::before {
+				opacity: 0;
+			}
+			.square:hover::after {
+				opacity: 1;
 			}
 			@media (min-width: 1200px) {
 				.square {
@@ -121,16 +149,22 @@
 		</div>
 		<script>
 			document.querySelectorAll('.square').forEach(square => {
-				const originalImage = square.style.backgroundImage;
+				const originalImage = square.style.backgroundImage.match(/url\("([^"]+)"\)/)[1];
 				const hoverImage = originalImage.replace('s1', 's2');
 				
-				square.addEventListener('mouseenter', () => {
-					square.style.backgroundImage = hoverImage;
-				});
+				square.style.backgroundImage = '';  // Clear the direct background
+				square.style.setProperty('--image1', `url("${originalImage}")`);
+				square.style.setProperty('--image2', `url("${hoverImage}")`);
 				
-				square.addEventListener('mouseleave', () => {
-					square.style.backgroundImage = originalImage;
-				});
+				// Set the background images on pseudo-elements
+				const style = document.createElement('style');
+				const squareId = 'square-' + Math.random().toString(36).substr(2, 9);
+				square.id = squareId;
+				style.textContent = `
+					#${squareId}::before { background-image: var(--image1); }
+					#${squareId}::after { background-image: var(--image2); }
+				`;
+				document.head.appendChild(style);
 			});
 		</script>
 	</body>
