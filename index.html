@@ -161,6 +161,21 @@
 			.hero-carousel-section .hero-images img.active {
 				opacity: 1;
 			}
+            @media (max-width: 768px) {
+                .hero-carousel-section {
+                    flex-direction: column;
+                    height: auto;
+                }
+                .hero-carousel-section .headshot,
+                .hero-carousel-section .hero-images {
+                    width: 100%;
+                }
+                .hero-carousel-section .headshot img,
+                .hero-carousel-section .hero-images img {
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
 		</style>
 	</head>
 	<body>
