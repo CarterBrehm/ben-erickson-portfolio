@@ -23,9 +23,10 @@
 				color: #454545;
 				flex-direction: column;
 				margin: 0;
-				font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial,
-					"Noto Sans", sans-serif, "Apple Color Emoji",
-					"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+				font-family:
+					"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+					sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+					"Segoe UI Symbol", "Noto Color Emoji";
 				font-weight: bold;
 			}
 			.hero {
@@ -129,48 +130,47 @@
 				height: 100%;
 				background-color: #f8f8ff;
 			}
-            .hero-carousel-section {
-                display: flex;
-                width: 100%;
-                margin: 20px 0;
-            }
-            .hero-carousel-section .headshot {
-                width: 50%;
-            }
-            .hero-carousel-section .headshot img {
-                width: 100%;
-                height: auto;
-            }
-            .hero-carousel-section .hero-images {
-                width: 50%;
-                position: relative;
-                overflow: hidden;
-            }
-            .hero-carousel-section .hero-images img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: auto;
-                opacity: 0;
-                transition: opacity 1s ease;
-            }
-            .hero-carousel-section .hero-images img.active {
-                opacity: 1;
-            }
+			.hero-carousel-section {
+				display: flex;
+				width: 100%;
+			}
+			.hero-carousel-section .headshot {
+				width: 50%;
+			}
+			.hero-carousel-section .headshot img {
+				width: 100%;
+				height: auto;
+			}
+			.hero-carousel-section .hero-images {
+				width: 50%;
+				position: relative;
+				overflow: hidden;
+			}
+			.hero-carousel-section .hero-images img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: auto;
+				opacity: 0;
+				transition: opacity 1s ease;
+			}
+			.hero-carousel-section .hero-images img.active {
+				opacity: 1;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="hero-carousel-section">
-            <div class="headshot">
-                <img src="/img/headshot.jpg" alt="Headshot" />
-            </div>
-            <div class="hero-images">
-                <img src="img/hero1.jpg" alt="Hero 1" class="active" />
-                <img src="img/hero2.jpg" alt="Hero 2" />
-                <img src="img/hero3.jpg" alt="Hero 3" />
-            </div>
-        </div>
+			<div class="headshot">
+				<img src="/img/headshot.jpg" alt="Headshot" />
+			</div>
+			<div class="hero-images">
+				<img src="img/hero1.png" alt="Hero 1" class="active" />
+				<img src="img/hero2.png" alt="Hero 2" />
+				<img src="img/hero3.png" alt="Hero 3" />
+			</div>
+		</div>
 		<div class="hero">
 			<img src="img/signature.png" alt="Ben Erickson signature" />
 			<div class="social-links">
@@ -288,16 +288,18 @@
 			}
 		</script>
 		<script>
-            (function() {
-                const heroImages = document.querySelectorAll('.hero-carousel-section .hero-images img');
-                let current = 0;
-                function showNextImage() {
-                    heroImages[current].classList.remove('active');
-                    current = (current + 1) % heroImages.length;
-                    heroImages[current].classList.add('active');
-                }
-                setInterval(showNextImage, 3000);
-            })();
+			(function () {
+				const heroImages = document.querySelectorAll(
+					".hero-carousel-section .hero-images img",
+				);
+				let current = 0;
+				function showNextImage() {
+					heroImages[current].classList.remove("active");
+					current = (current + 1) % heroImages.length;
+					heroImages[current].classList.add("active");
+				}
+				setInterval(showNextImage, 3000);
+			})();
 		</script>
 		<div class="model-section">
 			<model-viewer
