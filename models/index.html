@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			type="module"
+			src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+		></script>
+		<meta name="description" content="Ben Erickson's 3D Models Portfolio" />
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent"
+		/>
+		<title>Ben Erickson - Models</title>
+		<style>
+			@font-face {
+				font-family: "light";
+				src: url("../font/light.ttf") format("truetype");
+			}
+			@font-face {
+				font-family: "medium";
+				src: url("../font/medium.ttf") format("truetype");
+			}
+			@font-face {
+				font-family: "bold";
+				src: url("../font/bold.ttf") format("truetype");
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body,
+			html {
+				margin: 0;
+				padding: 0;
+				font-family: "light", sans-serif;
+				background-color: #f5f5f5;
+			}
+
+			.nav-back {
+				position: fixed;
+				top: 20px;
+				left: 20px;
+				background: rgba(51, 51, 51, 0.9);
+				border: 2px solid rgba(51, 51, 51, 0.3);
+				color: white;
+				padding: 10px 20px;
+				text-decoration: none;
+				border-radius: 25px;
+				font-family: "medium", sans-serif;
+				transition: all 0.3s ease;
+				z-index: 100;
+			}
+
+			.nav-back:hover {
+				background: rgba(51, 51, 51, 1);
+				transform: translateY(-2px);
+			}
+
+			.model-section {
+				height: 80vh;
+				width: 80%;
+				display: flex;
+				margin: auto;
+				justify-content: center;
+				align-items: center;
+			}
+
+			model-viewer {
+				width: 100%;
+				height: 100%;
+				background-color: #f8f8ff;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="../beta.html" class="nav-back">← Back to Portfolio</a>
+
+		<div class="model-section">
+			<model-viewer
+				src="model1.glb"
+				ar
+				camera-orbit="180deg 120deg 105%"
+				auto-rotate
+				shadow-intensity="1"
+				camera-controls
+				touch-action="pan-x"
+				loading="lazy"
+			></model-viewer>
+		</div>
+		<div class="model-section">
+			<model-viewer
+				src="model2.glb"
+				ar
+				camera-orbit="180deg 120deg 105%"
+				auto-rotate
+				shadow-intensity="1"
+				camera-controls
+				touch-action="pan-x"
+				loading="lazy"
+			></model-viewer>
+		</div>
+		<div class="model-section">
+			<model-viewer
+				src="model3.glb"
+				ar
+				camera-orbit="0deg 0deg 105%"
+				auto-rotate
+				shadow-intensity="1"
+				camera-controls
+				touch-action="pan-x"
+				loading="lazy"
+			></model-viewer>
+		</div>
+		<div class="model-section">
+			<model-viewer
+				src="model4.glb"
+				ar
+				camera-orbit="180deg 120deg 105%"
+				auto-rotate
+				shadow-intensity="1"
+				camera-controls
+				touch-action="pan-x"
+				loading="lazy"
+			></model-viewer>
+		</div>
+		<div class="model-section">
+			<model-viewer
+				src="model5.glb"
+				ar
+				camera-orbit="180deg 120deg 105%"
+				auto-rotate
+				shadow-intensity="1"
+				camera-controls
+				touch-action="pan-x"
+				loading="lazy"
+			></model-viewer>
+		</div>
+		<div class="model-section">
+			<model-viewer
+				src="model6.glb"
+				ar
+				camera-orbit="180deg 120deg 105%"
+				auto-rotate
+				shadow-intensity="1"
+				camera-controls
+				touch-action="pan-x"
+				loading="lazy"
+			></model-viewer>
+		</div>
+	</body>
+</html>

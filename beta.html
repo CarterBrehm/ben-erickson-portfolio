@@ -48,40 +48,48 @@
 				font-weight: bold;
 			}
 
-			/* Desktop layout - 4 quadrant grid */
+			/* Desktop layout - 2 column grid */
 			.container {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
-				grid-template-rows: 1fr 1fr;
+				grid-template-rows: 1fr;
 				height: 93vh;
 				min-height: 93vh;
 			}
 
-			.headshot {
+			.left-side {
 				grid-column: 1;
 				grid-row: 1;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				justify-content: center;
+				justify-content: space-evenly;
 				padding: 20px;
 			}
 
-			.bottom-left {
-				grid-column: 1;
-				grid-row: 2;
+			.title-section {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				justify-content: center;
-				padding: 20px;
+			}
+
+			.headshot-section {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.bio-section {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 				text-align: center;
-				border-radius: 10px;
+				width: 100%;
 			}
 
 			.images {
 				grid-column: 2;
-				grid-row: 1 / 3;
+				grid-row: 1;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -90,7 +98,7 @@
 
 			.title {
 				text-align: center;
-				margin-bottom: 10px;
+				margin: 0;
 			}
 
 			h1 {
@@ -100,7 +108,7 @@
 				margin: 0;
 			}
 
-			.headshot img {
+			.headshot-section img {
 				max-width: 100%;
 				max-height: 300px;
 				width: auto;
@@ -157,6 +165,7 @@
 				background-color: #fff;
 				padding: 10px;
 				border-radius: 10px;
+				width: 100%;
 			}
 
 			.bio p {
@@ -188,11 +197,14 @@
 					min-height: 90vh;
 				}
 
-				.headshot,
-				.bottom-left,
+				.left-side,
 				.images {
 					width: 100%;
-					padding: 20px;
+					padding: 15px 20px;
+				}
+
+				.images {
+					padding-bottom: 80px;
 				}
 
 				h1 {
@@ -243,45 +255,53 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="headshot">
-				<div class="title bold">
-					<h1>Ben Erickson</h1>
+			<div class="left-side">
+				<div class="title-section">
+					<div class="title bold">
+						<h1>Ben Erickson</h1>
+					</div>
 				</div>
-				<img src="img/headshot.jpg" alt="Headshot" />
-			</div>
-			<div class="bottom-left">
-				<div class="bio">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Sed in lorem hendrerit mi viverra vestibulum non
-						imperdiet mi. Mauris hendrerit elit et mauris auctor
-						facilisis. Fusce sit amet ultricies risus. Curabitur sit
-						amet ullamcorper tellus. Curabitur eu maximus purus, non
-						ultricies risus. Integer purus elit, congue et tincidunt
-						sit amet, tincidunt eget sapien.
-					</p>
+				<div class="headshot-section">
+					<img src="img/headshot.jpg" alt="Headshot" />
 				</div>
-				<div class="social-links">
-					<a
-						href="https://www.behance.net/benerickson1"
-						target="_blank"
-						rel="noopener"
-					>
-						<img src="img/behance.png" alt="Behance Profile" />
-					</a>
-					<a
-						href="https://www.instagram.com/benericksonid"
-						target="_blank"
-						rel="noopener"
-					>
-						<img src="img/insta.png" alt="Instagram Profile" />
-					</a>
-					<a href="mailto:Ben.ericksonfam@gmail.com">
-						<img src="img/email.png" alt="Email Contact" />
-					</a>
-					<a href="tel:4028102473">
-						<img src="img/phone.png" alt="Phone Contact" />
-					</a>
+				<div class="bio-section">
+					<div class="bio">
+						<p>
+							Recent Industrial Design graduate (BFA, University
+							of Kansas) with a strong foundation in user-centered
+							design, 3D modeling, and product visualization.
+							Highly motivated and detail-oriented, with daily
+							sketching practice that sharpens ideation and form
+							development. Proficient in CAD software and
+							rendering tools, with a keen eye for aesthetics and
+							functionality. Passionate about solving real-world
+							problems through innovative design, and eager to
+							contribute to a collaborative, forward-thinking
+							design team.
+						</p>
+					</div>
+					<div class="social-links">
+						<a
+							href="https://www.behance.net/benerickson1"
+							target="_blank"
+							rel="noopener"
+						>
+							<img src="img/behance.png" alt="Behance Profile" />
+						</a>
+						<a
+							href="https://www.instagram.com/benericksonid"
+							target="_blank"
+							rel="noopener"
+						>
+							<img src="img/insta.png" alt="Instagram Profile" />
+						</a>
+						<a href="mailto:Ben.ericksonfam@gmail.com">
+							<img src="img/email.png" alt="Email Contact" />
+						</a>
+						<a href="tel:4028102473">
+							<img src="img/phone.png" alt="Phone Contact" />
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="images">
@@ -293,11 +313,11 @@
 		</div>
 		<footer>
 			<div class="footer-links">
-				<a href="#link1">School Projects</a>
-				<a href="#link2">Personal Projects</a>
-				<a href="#link3">Commissions</a>
-				<a href="#link4">Models</a>
-				<a href="#link5">Sketches</a>
+				<a href="school-projects/">School Projects</a>
+				<a href="personal-projects/">Personal Projects</a>
+				<a href="commissions">Commissions</a>
+				<a href="models">Models</a>
+				<a href="sketches">Sketches</a>
 			</div>
 		</footer>
 		<script>
@@ -313,14 +333,14 @@
 				.then((response) => response.json())
 				.then((data) => {
 					// Extract showcase folders only
-					showcaseFolders = Object.keys(data.folders)
-						.filter((folder) => folder.startsWith("showcase/"))
-						.map((folder) => ({
+					showcaseFolders = Object.keys(data.folders).map(
+						(folder) => ({
 							name: folder,
 							title: data.folders[folder].title,
 							images: data.folders[folder].images,
 							index: data.folders[folder].index,
-						}));
+						}),
+					);
 
 					if (showcaseFolders.length > 0) {
 						startSlideshow();
