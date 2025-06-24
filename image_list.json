@@ -1,287 +1,252 @@
 {
-  "folders": {
-    "sketches/Zombie project ": {
-      "images": [
-        "sketches/Zombie project /Untitled_Artwork 1.png",
-        "sketches/Zombie project /Untitled_Artwork 2.png",
-        "sketches/Zombie project /Untitled_Artwork 3.png",
-        "sketches/Zombie project /Untitled_Artwork 4.png",
-        "sketches/Zombie project /Untitled_Artwork 5.png",
-        "sketches/Zombie project /Untitled_Artwork 6.png",
-        "sketches/Zombie project /Untitled_Artwork 7.png",
-        "sketches/Zombie project /Untitled_Artwork 8.png",
-        "sketches/Zombie project /Untitled_Artwork 9.png",
-        "sketches/Zombie project /Untitled_Artwork(1).png",
-        "sketches/Zombie project /Untitled_Artwork.png"
-      ],
-      "title": "Zombie Project Sketches",
-      "index": "sketches/Zombie project "
-    },
-    "sketches/Misc": {
-      "images": [
-        "sketches/Misc/Untitled_Artwork 1(1).png",
-        "sketches/Misc/Untitled_Artwork 1.png",
-        "sketches/Misc/Untitled_Artwork 2.png",
-        "sketches/Misc/Untitled_Artwork(1).png",
-        "sketches/Misc/Untitled_Artwork(2).png",
-        "sketches/Misc/Untitled_Artwork.png"
-      ],
-      "title": "Miscellaneous Sketches",
-      "index": "sketches/Misc"
-    },
-    "sketches/Footwear": {
-      "images": [
-        "sketches/Footwear/Untitled_Artwork 1(1).png",
-        "sketches/Footwear/Untitled_Artwork 1.png",
-        "sketches/Footwear/Untitled_Artwork 2(1).png",
-        "sketches/Footwear/Untitled_Artwork 2.png",
-        "sketches/Footwear/Untitled_Artwork(1).png",
-        "sketches/Footwear/Untitled_Artwork(2).png",
-        "sketches/Footwear/Untitled_Artwork(3).png",
-        "sketches/Footwear/Untitled_Artwork(4).png",
-        "sketches/Footwear/Untitled_Artwork(5).png",
-        "sketches/Footwear/Untitled_Artwork(6).png",
-        "sketches/Footwear/Untitled_Artwork.png"
-      ],
-      "title": "Footwear Sketches",
-      "index": "sketches/Footwear"
-    },
-    "sketches/Mule project ": {
-      "images": [
-        "sketches/Mule project /Untitled_Artwork 1.png",
-        "sketches/Mule project /Untitled_Artwork 2.png",
-        "sketches/Mule project /Untitled_Artwork 3.png",
-        "sketches/Mule project /Untitled_Artwork 4.png",
-        "sketches/Mule project /Untitled_Artwork 5.png",
-        "sketches/Mule project /Untitled_Artwork 6.png",
-        "sketches/Mule project /Untitled_Artwork 7.png",
-        "sketches/Mule project /Untitled_Artwork.png"
-      ],
-      "title": "Mule Project Sketches",
-      "index": "sketches/Mule project "
-    },
-    "sketches/Garmin project ": {
-      "images": [
-        "sketches/Garmin project /Untitled_Artwork 1.png",
-        "sketches/Garmin project /Untitled_Artwork 2.png",
-        "sketches/Garmin project /Untitled_Artwork 3.png",
-        "sketches/Garmin project /Untitled_Artwork 4.png",
-        "sketches/Garmin project /Untitled_Artwork 5.png",
-        "sketches/Garmin project /Untitled_Artwork.png"
-      ],
-      "title": "Garmin Project Sketches",
-      "index": "sketches/Garmin project"
-    },
-    "sketches/Cars": {
-      "images": [
-        "sketches/Cars/Untitled_Artwork 1.png",
-        "sketches/Cars/Untitled_Artwork 2.png",
-        "sketches/Cars/Untitled_Artwork 3.png",
-        "sketches/Cars/Untitled_Artwork(1).png",
-        "sketches/Cars/Untitled_Artwork.png"
-      ],
-      "title": "Cars",
-      "index": "sketches/Cars"
-    },
-    "img": {
-      "images": [
-        "img/behance.png",
-        "img/email.png",
-        "img/gallery.png",
-        "img/headshot.jpg",
-        "img/hero1.png",
-        "img/hero2.png",
-        "img/insta.png",
-        "img/phone.png",
-        "img/signature.png"
-      ],
-      "title": "img",
-      "index": "img"
-    },
-    "squares": {
-      "images": [
-        "squares/as1.jpg",
-        "squares/as2.jpg",
-        "squares/bs1.jpg",
-        "squares/bs2.jpg",
-        "squares/cs1.jpg",
-        "squares/cs2.jpg",
-        "squares/ds1.jpg",
-        "squares/ds2.jpg",
-        "squares/es1.jpg",
-        "squares/es2.jpg",
-        "squares/fs1.jpg",
-        "squares/fs2.jpg",
-        "squares/hs1.png",
-        "squares/hs2.png"
-      ],
-      "title": "squares",
-      "index": "squares"
-    },
-    "showcase/A": {
-      "images": [
-        "showcase/A/Acover.jpg",
-        "showcase/A/a1.jpg",
-        "showcase/A/a10.jpg",
-        "showcase/A/a11.jpg",
-        "showcase/A/a12.jpg",
-        "showcase/A/a13.jpg",
-        "showcase/A/a14.jpg",
-        "showcase/A/a2.jpg",
-        "showcase/A/a3.jpg",
-        "showcase/A/a4.jpg",
-        "showcase/A/a5.jpg",
-        "showcase/A/a6.jpg",
-        "showcase/A/a7.jpg",
-        "showcase/A/a8.jpg",
-        "showcase/A/a9.jpg"
-      ],
-      "title": "New Balance Project",
-      "index": "showcase/A"
-    },
-    "showcase/F": {
-      "images": [
-        "showcase/F/Fcover.jpg",
-        "showcase/F/f1.jpg",
-        "showcase/F/f10.jpg",
-        "showcase/F/f11.jpg",
-        "showcase/F/f12.jpg",
-        "showcase/F/f13.jpg",
-        "showcase/F/f14.jpg",
-        "showcase/F/f15.jpg",
-        "showcase/F/f16.jpg",
-        "showcase/F/f17.jpg",
-        "showcase/F/f18.jpg",
-        "showcase/F/f19.jpg",
-        "showcase/F/f2.jpg",
-        "showcase/F/f3.jpg",
-        "showcase/F/f4.jpg",
-        "showcase/F/f5.jpg",
-        "showcase/F/f6.jpg",
-        "showcase/F/f7.jpg",
-        "showcase/F/f8.jpg",
-        "showcase/F/f9.jpg"
-      ],
-      "title": "Erickson Motivator",
-      "index": "showcase/F"
-    },
-    "showcase/H": {
-      "images": [
-        "showcase/H/h1.png",
-        "showcase/H/h10.png",
-        "showcase/H/h11.png",
-        "showcase/H/h12.png",
-        "showcase/H/h15.png",
-        "showcase/H/h16.png",
-        "showcase/H/h2.png",
-        "showcase/H/h21.png",
-        "showcase/H/h22.png",
-        "showcase/H/h23.png",
-        "showcase/H/h24.png",
-        "showcase/H/h25.png",
-        "showcase/H/h26.png",
-        "showcase/H/h27.png",
-        "showcase/H/h28.png",
-        "showcase/H/h29.png",
-        "showcase/H/h3.png",
-        "showcase/H/h30.png",
-        "showcase/H/h31.png",
-        "showcase/H/h32.png",
-        "showcase/H/h33.png",
-        "showcase/H/h34.png",
-        "showcase/H/h35.png",
-        "showcase/H/h36.png",
-        "showcase/H/h37.png",
-        "showcase/H/h38.png",
-        "showcase/H/h39.png",
-        "showcase/H/h4.png",
-        "showcase/H/h40.png",
-        "showcase/H/h41.png",
-        "showcase/H/h42.png",
-        "showcase/H/h43.png",
-        "showcase/H/h44.png",
-        "showcase/H/h45.png",
-        "showcase/H/h46.png",
-        "showcase/H/h47.png",
-        "showcase/H/h48.png",
-        "showcase/H/h5.png",
-        "showcase/H/h6.png",
-        "showcase/H/h7.png",
-        "showcase/H/h8.png",
-        "showcase/H/h9.png",
-        "showcase/H/hbackcover.png",
-        "showcase/H/hcover.png"
-      ],
-      "title": "Thesis Project",
-      "index": "showcase/H"
-    },
-    "showcase/C": {
-      "images": [
-        "showcase/C/Ccover.jpg",
-        "showcase/C/c1.jpg",
-        "showcase/C/c2.jpg",
-        "showcase/C/c3.jpg",
-        "showcase/C/c4.jpg",
-        "showcase/C/c5.jpg",
-        "showcase/C/c6.jpg",
-        "showcase/C/c7.jpg",
-        "showcase/C/c8.jpg"
-      ],
-      "title": "Garmin Project",
-      "index": "showcase/C"
-    },
-    "showcase/D": {
-      "images": [
-        "showcase/D/Dcover.jpg",
-        "showcase/D/d1.jpg",
-        "showcase/D/d2.jpg",
-        "showcase/D/d3.jpg",
-        "showcase/D/d4.jpg",
-        "showcase/D/d5.jpg",
-        "showcase/D/d6.jpg"
-      ],
-      "title": "Nuk Sequencer",
-      "index": "showcase/D"
-    },
-    "showcase/E": {
-      "images": [
-        "showcase/E/E1.jpg",
-        "showcase/E/E2.jpg",
-        "showcase/E/E3.jpg",
-        "showcase/E/E4.jpg",
-        "showcase/E/E5.jpg",
-        "showcase/E/E6.jpg",
-        "showcase/E/E7.jpg",
-        "showcase/E/E8.jpg",
-        "showcase/E/E9.jpg",
-        "showcase/E/Ecover.jpg"
-      ],
-      "title": "Under Armor Project",
-      "index": "showcase/E"
-    },
-    "showcase/B": {
-      "images": [
-        "showcase/B/b1.jpg",
-        "showcase/B/b10.jpg",
-        "showcase/B/b11.jpg",
-        "showcase/B/b12.jpg",
-        "showcase/B/b13.jpg",
-        "showcase/B/b14.jpg",
-        "showcase/B/b15.jpg",
-        "showcase/B/b16.jpg",
-        "showcase/B/b17.jpg",
-        "showcase/B/b18.jpg",
-        "showcase/B/b2.jpg",
-        "showcase/B/b3.jpg",
-        "showcase/B/b4.jpg",
-        "showcase/B/b5.jpg",
-        "showcase/B/b6.jpg",
-        "showcase/B/b7.jpg",
-        "showcase/B/b8.jpg",
-        "showcase/B/b9.jpg"
-      ],
-      "title": "Apocalypse Project",
-      "index": "showcase/B"
-    }
-  }
+	"folders": {
+		"sketches/Zombie project ": {
+			"images": [
+				"sketches/Zombie project /Untitled_Artwork 1.png",
+				"sketches/Zombie project /Untitled_Artwork 2.png",
+				"sketches/Zombie project /Untitled_Artwork 3.png",
+				"sketches/Zombie project /Untitled_Artwork 4.png",
+				"sketches/Zombie project /Untitled_Artwork 5.png",
+				"sketches/Zombie project /Untitled_Artwork 6.png",
+				"sketches/Zombie project /Untitled_Artwork 7.png",
+				"sketches/Zombie project /Untitled_Artwork 8.png",
+				"sketches/Zombie project /Untitled_Artwork 9.png",
+				"sketches/Zombie project /Untitled_Artwork(1).png",
+				"sketches/Zombie project /Untitled_Artwork.png"
+			],
+			"title": "Zombie Project Sketches",
+			"index": "sketches/"
+		},
+		"sketches/Misc": {
+			"images": [
+				"sketches/Misc/Untitled_Artwork 1(1).png",
+				"sketches/Misc/Untitled_Artwork 1.png",
+				"sketches/Misc/Untitled_Artwork 2.png",
+				"sketches/Misc/Untitled_Artwork(1).png",
+				"sketches/Misc/Untitled_Artwork(2).png",
+				"sketches/Misc/Untitled_Artwork.png"
+			],
+			"title": "Miscellaneous Sketches",
+			"index": "sketches/"
+		},
+		"sketches/Footwear": {
+			"images": [
+				"sketches/Footwear/Untitled_Artwork 1(1).png",
+				"sketches/Footwear/Untitled_Artwork 1.png",
+				"sketches/Footwear/Untitled_Artwork 2(1).png",
+				"sketches/Footwear/Untitled_Artwork 2.png",
+				"sketches/Footwear/Untitled_Artwork(1).png",
+				"sketches/Footwear/Untitled_Artwork(2).png",
+				"sketches/Footwear/Untitled_Artwork(3).png",
+				"sketches/Footwear/Untitled_Artwork(4).png",
+				"sketches/Footwear/Untitled_Artwork(5).png",
+				"sketches/Footwear/Untitled_Artwork(6).png",
+				"sketches/Footwear/Untitled_Artwork.png"
+			],
+			"title": "Footwear Sketches",
+			"index": "sketches/"
+		},
+		"sketches/Mule project ": {
+			"images": [
+				"sketches/Mule project /Untitled_Artwork 1.png",
+				"sketches/Mule project /Untitled_Artwork 2.png",
+				"sketches/Mule project /Untitled_Artwork 3.png",
+				"sketches/Mule project /Untitled_Artwork 4.png",
+				"sketches/Mule project /Untitled_Artwork 5.png",
+				"sketches/Mule project /Untitled_Artwork 6.png",
+				"sketches/Mule project /Untitled_Artwork 7.png",
+				"sketches/Mule project /Untitled_Artwork.png"
+			],
+			"title": "Mule Project Sketches",
+			"index": "sketches/"
+		},
+		"sketches/Garmin project ": {
+			"images": [
+				"sketches/Garmin project /Untitled_Artwork 1.png",
+				"sketches/Garmin project /Untitled_Artwork 2.png",
+				"sketches/Garmin project /Untitled_Artwork 3.png",
+				"sketches/Garmin project /Untitled_Artwork 4.png",
+				"sketches/Garmin project /Untitled_Artwork 5.png",
+				"sketches/Garmin project /Untitled_Artwork.png"
+			],
+			"title": "Garmin Project Sketches",
+			"index": "sketches/"
+		},
+		"sketches/Cars": {
+			"images": [
+				"sketches/Cars/Untitled_Artwork 1.png",
+				"sketches/Cars/Untitled_Artwork 2.png",
+				"sketches/Cars/Untitled_Artwork 3.png",
+				"sketches/Cars/Untitled_Artwork(1).png",
+				"sketches/Cars/Untitled_Artwork.png"
+			],
+			"title": "Cars",
+			"index": "sketches/"
+		},
+		"showcase/A": {
+			"images": [
+				"showcase/A/Acover.jpg",
+				"showcase/A/a1.jpg",
+				"showcase/A/a10.jpg",
+				"showcase/A/a11.jpg",
+				"showcase/A/a12.jpg",
+				"showcase/A/a13.jpg",
+				"showcase/A/a14.jpg",
+				"showcase/A/a2.jpg",
+				"showcase/A/a3.jpg",
+				"showcase/A/a4.jpg",
+				"showcase/A/a5.jpg",
+				"showcase/A/a6.jpg",
+				"showcase/A/a7.jpg",
+				"showcase/A/a8.jpg",
+				"showcase/A/a9.jpg"
+			],
+			"title": "New Balance Project",
+			"index": "showcase/A"
+		},
+		"showcase/F": {
+			"images": [
+				"showcase/F/Fcover.jpg",
+				"showcase/F/f1.jpg",
+				"showcase/F/f10.jpg",
+				"showcase/F/f11.jpg",
+				"showcase/F/f12.jpg",
+				"showcase/F/f13.jpg",
+				"showcase/F/f14.jpg",
+				"showcase/F/f15.jpg",
+				"showcase/F/f16.jpg",
+				"showcase/F/f17.jpg",
+				"showcase/F/f18.jpg",
+				"showcase/F/f19.jpg",
+				"showcase/F/f2.jpg",
+				"showcase/F/f3.jpg",
+				"showcase/F/f4.jpg",
+				"showcase/F/f5.jpg",
+				"showcase/F/f6.jpg",
+				"showcase/F/f7.jpg",
+				"showcase/F/f8.jpg",
+				"showcase/F/f9.jpg"
+			],
+			"title": "Erickson Motivator",
+			"index": "showcase/F"
+		},
+		"showcase/H": {
+			"images": [
+				"showcase/H/h1.png",
+				"showcase/H/h10.png",
+				"showcase/H/h11.png",
+				"showcase/H/h12.png",
+				"showcase/H/h15.png",
+				"showcase/H/h16.png",
+				"showcase/H/h2.png",
+				"showcase/H/h21.png",
+				"showcase/H/h22.png",
+				"showcase/H/h23.png",
+				"showcase/H/h24.png",
+				"showcase/H/h25.png",
+				"showcase/H/h26.png",
+				"showcase/H/h27.png",
+				"showcase/H/h28.png",
+				"showcase/H/h29.png",
+				"showcase/H/h3.png",
+				"showcase/H/h30.png",
+				"showcase/H/h31.png",
+				"showcase/H/h32.png",
+				"showcase/H/h33.png",
+				"showcase/H/h34.png",
+				"showcase/H/h35.png",
+				"showcase/H/h36.png",
+				"showcase/H/h37.png",
+				"showcase/H/h38.png",
+				"showcase/H/h39.png",
+				"showcase/H/h4.png",
+				"showcase/H/h40.png",
+				"showcase/H/h41.png",
+				"showcase/H/h42.png",
+				"showcase/H/h43.png",
+				"showcase/H/h44.png",
+				"showcase/H/h45.png",
+				"showcase/H/h46.png",
+				"showcase/H/h47.png",
+				"showcase/H/h48.png",
+				"showcase/H/h5.png",
+				"showcase/H/h6.png",
+				"showcase/H/h7.png",
+				"showcase/H/h8.png",
+				"showcase/H/h9.png",
+				"showcase/H/hbackcover.png",
+				"showcase/H/hcover.png"
+			],
+			"title": "Thesis Project",
+			"index": "showcase/H"
+		},
+		"showcase/C": {
+			"images": [
+				"showcase/C/Ccover.jpg",
+				"showcase/C/c1.jpg",
+				"showcase/C/c2.jpg",
+				"showcase/C/c3.jpg",
+				"showcase/C/c4.jpg",
+				"showcase/C/c5.jpg",
+				"showcase/C/c6.jpg",
+				"showcase/C/c7.jpg",
+				"showcase/C/c8.jpg"
+			],
+			"title": "Garmin Project",
+			"index": "showcase/C"
+		},
+		"showcase/D": {
+			"images": [
+				"showcase/D/Dcover.jpg",
+				"showcase/D/d1.jpg",
+				"showcase/D/d2.jpg",
+				"showcase/D/d3.jpg",
+				"showcase/D/d4.jpg",
+				"showcase/D/d5.jpg",
+				"showcase/D/d6.jpg"
+			],
+			"title": "Nuk Sequencer",
+			"index": "showcase/D"
+		},
+		"showcase/E": {
+			"images": [
+				"showcase/E/E1.jpg",
+				"showcase/E/E2.jpg",
+				"showcase/E/E3.jpg",
+				"showcase/E/E4.jpg",
+				"showcase/E/E5.jpg",
+				"showcase/E/E6.jpg",
+				"showcase/E/E7.jpg",
+				"showcase/E/E8.jpg",
+				"showcase/E/E9.jpg",
+				"showcase/E/Ecover.jpg"
+			],
+			"title": "Under Armor Project",
+			"index": "showcase/E"
+		},
+		"showcase/B": {
+			"images": [
+				"showcase/B/b1.jpg",
+				"showcase/B/b10.jpg",
+				"showcase/B/b11.jpg",
+				"showcase/B/b12.jpg",
+				"showcase/B/b13.jpg",
+				"showcase/B/b14.jpg",
+				"showcase/B/b15.jpg",
+				"showcase/B/b16.jpg",
+				"showcase/B/b17.jpg",
+				"showcase/B/b18.jpg",
+				"showcase/B/b2.jpg",
+				"showcase/B/b3.jpg",
+				"showcase/B/b4.jpg",
+				"showcase/B/b5.jpg",
+				"showcase/B/b6.jpg",
+				"showcase/B/b7.jpg",
+				"showcase/B/b8.jpg",
+				"showcase/B/b9.jpg"
+			],
+			"title": "Apocalypse Project",
+			"index": "showcase/B"
+		}
+	}
 }
