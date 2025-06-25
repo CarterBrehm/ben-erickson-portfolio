@@ -13,409 +13,419 @@
 		/>
 		<title>Ben Erickson</title>
 		<style>
-			a {
-				color: inherit;
-				text-decoration: none;
+			@font-face {
+				font-family: "light";
+				src: url("font/light.ttf") format("truetype");
 			}
-			body {
-				display: flex;
-				background-color: #f8f8ff;
-				color: #454545;
-				flex-direction: column;
+			@font-face {
+				font-family: "medium";
+				src: url("font/medium.ttf") format("truetype");
+			}
+			@font-face {
+				font-family: "bold";
+				src: url("font/bold.ttf") format("truetype");
+			}
+			/* convenience classes for above font faces */
+			.light {
+				font-family: "light", sans-serif;
+			}
+			.medium {
+				font-family: "medium", sans-serif;
+			}
+			.bold {
+				font-family: "bold", sans-serif;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body,
+			html {
+				height: 100%;
 				margin: 0;
-				font-family:
-					"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-					sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-					"Segoe UI Symbol", "Noto Color Emoji";
+				font-family: "light", sans-serif;
 				font-weight: bold;
 			}
-			.hero {
-				height: 40vh;
+
+			/* Desktop layout - 2 column grid */
+			.container {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr;
+				height: 93vh;
+				min-height: 93vh;
+			}
+
+			.left-side {
+				grid-column: 1;
+				grid-row: 1;
 				display: flex;
-				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-evenly;
+				padding: 20px;
+			}
+
+			.title-section {
+				display: flex;
+				flex-direction: column;
 				align-items: center;
 			}
-			.hero {
+
+			.headshot-section {
+				display: flex;
 				flex-direction: column;
+				align-items: center;
 			}
-			.hero img {
-				width: 90%;
+
+			.bio-section {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				width: 100%;
+			}
+
+			.images {
+				grid-column: 2;
+				grid-row: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #f0f0f0;
+			}
+
+			.title {
+				text-align: center;
+				margin: 0;
+			}
+
+			h1 {
+				font-size: 4.5rem;
+				font-weight: bold;
+				color: #333;
+				margin: 0;
+			}
+
+			.headshot-section img {
+				max-width: 100%;
+				max-height: 300px;
+				width: auto;
 				height: auto;
 				object-fit: contain;
-				max-height: 70%;
+				border: 2px solid #ccc;
 			}
+
+			.images img {
+				max-width: 100%;
+				max-height: 100%;
+				width: auto;
+				height: auto;
+				object-fit: contain;
+			}
+
+			#carousel-image {
+				transition: opacity 0.5s ease-in-out;
+				cursor: pointer;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+
+			.image-container {
+				position: relative;
+				width: 800px;
+				height: 600px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.image-title {
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: rgba(0, 0, 0, 0.7);
+				color: white;
+				padding: 8px 16px;
+				border-radius: 4px;
+				font-family: "medium", sans-serif;
+				font-size: 1.2rem;
+				opacity: 0;
+				transition: opacity 0.5s ease-in-out;
+			}
+
+			.image-title.show {
+				opacity: 1;
+			}
+
+			.bio {
+				line-height: 1.6;
+				text-align: center;
+				margin-bottom: 20px;
+				background-color: #fff;
+				padding: 10px;
+				border-radius: 10px;
+				width: 100%;
+			}
+
+			.bio p {
+				margin: 0;
+			}
+
 			.social-links {
 				display: flex;
 				gap: 20px;
-				margin-top: 20px;
+				justify-content: center;
 			}
+
 			.social-links img {
 				width: 24px;
 				height: 24px;
 				transition: opacity 0.2s ease;
 			}
+
 			.social-links a:hover img {
 				opacity: 0.7;
 			}
-			.squares-container {
-				height: 60vh;
-				overflow-x: auto;
-				overflow-y: hidden;
-				display: flex;
-				gap: 20px;
-				padding: 20px;
-			}
-			.square {
-				flex: 0 0 auto;
-				width: calc(100vw - 40px);
-				height: calc(100vw - 40px);
-				border-radius: 8px;
-				max-width: calc(60vh - 40px);
-				max-height: calc(60vh - 40px);
-				cursor: pointer;
-				position: relative;
-				overflow: hidden;
-			}
-			.square::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				background-size: cover;
-				background-position: center;
-				transition: opacity 0.5s ease;
-			}
-			.square::after {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				background-size: cover;
-				background-position: center;
-				opacity: 0;
-				transition: opacity 0.5s ease;
-			}
-			@media (hover: hover) {
-				.square:hover::before {
-					opacity: 0;
+
+			/* Mobile layout - stack everything vertically */
+			@media (max-width: 768px) {
+				.container {
+					display: flex;
+					flex-direction: column;
+					height: auto;
+					min-height: 90vh;
 				}
-				.square:hover::after {
-					opacity: 1;
+
+				.left-side,
+				.images {
+					width: 100%;
+					padding: 15px 20px;
+				}
+
+				.images {
+					padding-bottom: 80px;
+				}
+
+				h1 {
+					font-size: 3rem;
+				}
+
+				.images {
+					background-color: #f0f0f0;
+					min-height: 300px;
+				}
+
+				.image-container {
+					width: 100%;
+					max-width: 400px;
+					height: 250px;
 				}
 			}
 
-			/* Mobile - show hover state when centered */
-			@media (hover: none) {
-				.square.in-view::before {
-					opacity: 0;
-				}
-				.square.in-view::after {
-					opacity: 1;
-				}
-			}
-			.model-section {
-				height: 80vh;
-				width: 80%;
-				display: flex;
-				margin: auto;
-				justify-content: center;
-				align-items: center;
-			}
-			model-viewer {
+			footer {
+				padding: 10px 0;
+				background-color: #333;
+				color: white;
+				position: fixed;
+				bottom: 0;
+				height: 7vh;
+				max-height: 7vh;
 				width: 100%;
-				height: 100%;
-				background-color: #f8f8ff;
-			}
-			.hero-carousel-section {
-				display: flex;
-				width: 100%;
-				height: 60vh;
-			}
-			.hero-carousel-section .headshot {
-				width: 50%;
-			}
-			.hero-carousel-section .headshot img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-			.hero-carousel-section .hero-images {
-				width: 50%;
-				position: relative;
+				text-align: center;
 				overflow: hidden;
 			}
-			.hero-carousel-section .hero-images img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				opacity: 0;
-				transition: opacity 1s ease;
+
+			.footer-links {
+				display: flex;
+				justify-content: space-around;
+				padding: 10px 5vw;
+				gap: 20px;
+				overflow-x: auto;
+				white-space: nowrap;
+				position: relative;
+				scroll-snap-type: inline mandatory;
+				scrollbar-width: none; /* Firefox */
+				overflow-y: hidden;
 			}
-			.hero-carousel-section .hero-images img.active {
-				opacity: 1;
+
+			.footer-links a {
+				color: white;
+				text-decoration: none;
 			}
-			@media (max-width: 768px) {
-				.hero-carousel-section {
-					flex-direction: column;
-					height: auto;
-				}
-				.hero-carousel-section .headshot,
-				.hero-carousel-section .hero-images {
-					width: 100%;
-				}
-				.hero-carousel-section .headshot img {
-					height: auto;
-					object-fit: cover;
-				}
-				.hero-carousel-section .hero-images {
-					position: relative;
-					margin-bottom: -50px;
-					height: 30vh;
-				}
-				.hero-carousel-section .hero-images img {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-					object-position: center center;
-				}
-				.hero-carousel-section .hero-images img:nth-child(1),
-				.hero-carousel-section .hero-images img:nth-child(3) {
-					object-position: center center;
-				}
+
+			.footer-links::-webkit-scrollbar {
+				display: none; /* Safari and Chrome */
 			}
 		</style>
 	</head>
 	<body>
-		<div class="hero-carousel-section">
-			<div class="headshot">
-				<img src="/img/headshot.jpg" alt="Headshot" />
+		<div class="container">
+			<div class="left-side">
+				<div class="title-section">
+					<div class="title bold">
+						<h1>BEN ERICKSON</h1>
+					</div>
+				</div>
+				<div class="headshot-section">
+					<img src="img/headshot.jpg" alt="Headshot" />
+				</div>
+				<div class="bio-section">
+					<div class="bio">
+						<p>
+							Recent Industrial Design graduate (BFA, University
+							of Kansas) with a strong foundation in user-centered
+							design, 3D modeling, and product visualization.
+							Highly motivated and detail-oriented, with daily
+							sketching practice that sharpens ideation and form
+							development. Proficient in CAD software and
+							rendering tools, with a keen eye for aesthetics and
+							functionality. Passionate about solving real-world
+							problems through innovative design, and eager to
+							contribute to a collaborative, forward-thinking
+							design team.
+						</p>
+					</div>
+					<div class="social-links">
+						<a
+							href="https://www.behance.net/benerickson1"
+							target="_blank"
+							rel="noopener"
+						>
+							<img src="img/behance.png" alt="Behance Profile" />
+						</a>
+						<a
+							href="https://www.instagram.com/benericksonid"
+							target="_blank"
+							rel="noopener"
+						>
+							<img src="img/insta.png" alt="Instagram Profile" />
+						</a>
+						<a href="mailto:Ben.ericksonfam@gmail.com">
+							<img src="img/email.png" alt="Email Contact" />
+						</a>
+						<a href="tel:4028102473">
+							<img src="img/phone.png" alt="Phone Contact" />
+						</a>
+					</div>
+				</div>
 			</div>
-			<div class="hero-images">
-				<img src="img/hero1.png" alt="Hero 1" class="active" />
-				<img src="img/hero2.png" alt="Hero 2" />
+			<div class="images">
+				<div class="image-container">
+					<img src="" alt="Revolving Image" id="carousel-image" />
+					<div class="image-title" id="image-title">A</div>
+				</div>
 			</div>
 		</div>
-		<div class="hero">
-			<img
-				onClick="window.location.href='showcase/H'"
-				src="img/signature.png"
-				alt="Ben Erickson signature"
-			/>
-			<div class="social-links">
-				<a
-					href="https://www.behance.net/benerickson1"
-					target="_blank"
-					rel="noopener"
-				>
-					<img src="img/behance.png" alt="Behance Profile" />
-				</a>
-				<a
-					href="https://www.instagram.com/benericksonid"
-					target="_blank"
-					rel="noopener"
-				>
-					<img src="img/insta.png" alt="Instagram Profile" />
-				</a>
-				<a href="mailto:Ben.ericksonfam@gmail.com">
-					<img src="img/email.png" alt="Email Contact" />
-				</a>
-				<a href="tel:4028102473">
-					<img src="img/phone.png" alt="Phone Contact" />
-				</a>
+		<footer>
+			<div class="footer-links">
+				<a href="school-projects/">School Projects</a>
+				<a href="personal-projects/">Personal Projects</a>
+				<a href="commissions">Commissions</a>
+				<a href="models">Models</a>
+				<a href="sketches">Sketches</a>
 			</div>
-		</div>
-		<div class="squares-container">
-			<a href="showcase/H/">
-				<div
-					class="square"
-					style="background-image: url(&quot;squares/hs1.png&quot;)"
-				></div>
-			</a>
-			<a href="showcase/A/">
-				<div
-					class="square"
-					style="background-image: url(&quot;squares/as1.jpg&quot;)"
-				></div>
-			</a>
-			<a href="showcase/B/">
-				<div
-					class="square"
-					style="background-image: url(&quot;squares/bs1.jpg&quot;)"
-				></div>
-			</a>
-			<a href="showcase/C/">
-				<div
-					class="square"
-					style="background-image: url(&quot;squares/cs1.jpg&quot;)"
-				></div>
-			</a>
-			<a href="showcase/D/">
-				<div
-					class="square"
-					style="background-image: url(&quot;squares/ds1.jpg&quot;)"
-				></div>
-			</a>
-			<a href="showcase/E/">
-				<div
-					class="square"
-					style="background-image: url(&quot;squares/es1.jpg&quot;)"
-				></div>
-			</a>
-			<a href="showcase/F/">
-				<div
-					class="square"
-					style="background-image: url(&quot;squares/fs1.jpg&quot;)"
-				></div>
-			</a>
-		</div>
+		</footer>
 		<script>
-			document.querySelectorAll(".square").forEach((square) => {
-				const originalImage =
-					square.style.backgroundImage.match(/url\("([^"]+)"\)/)[1];
-				const hoverImage = originalImage.replace("s1", "s2");
+			let showcaseFolders = [];
+			let currentFolderIndex = 0;
+			let currentImageIndex = 0;
+			let currentFolderData = null;
+			const carouselImage = document.getElementById("carousel-image");
+			const imageTitle = document.getElementById("image-title");
 
-				square.style.backgroundImage = ""; // Clear the direct background
-				square.style.setProperty("--image1", `url("${originalImage}")`);
-				square.style.setProperty("--image2", `url("${hoverImage}")`);
+			// Load image list from JSON file
+			fetch("image_list.json")
+				.then((response) => response.json())
+				.then((data) => {
+					// Extract showcase folders only
+					showcaseFolders = Object.keys(data.folders).map(
+						(folder) => ({
+							name: folder,
+							title: data.folders[folder].title,
+							images: data.folders[folder].images,
+							index: data.folders[folder].index,
+						}),
+					);
 
-				// Set the background images on pseudo-elements
-				const style = document.createElement("style");
-				const squareId =
-					"square-" + Math.random().toString(36).substr(2, 9);
-				square.id = squareId;
-				style.textContent = `
-					#${squareId}::before { background-image: var(--image1); }
-					#${squareId}::after { background-image: var(--image2); }
-				`;
-				document.head.appendChild(style);
-			});
+					if (showcaseFolders.length > 0) {
+						startSlideshow();
+					}
+				})
+				.catch((error) => {
+					console.error("Error loading image list:", error);
+					// Fallback to original image if JSON fails to load
+				});
 
-			// Only setup mobile hover effect on touch devices
-			if (window.matchMedia("(hover: none)").matches) {
-				const container = document.querySelector(".squares-container");
-				const squares = document.querySelectorAll(".square");
+			function getRandomImageFromFolder() {
+				if (showcaseFolders.length === 0) return null;
 
-				function updateCenteredSquare() {
-					const containerRect = container.getBoundingClientRect();
-					const containerCenter =
-						containerRect.left + containerRect.width / 2;
+				// Get random folder
+				let newFolderIndex;
+				do {
+					newFolderIndex = Math.floor(
+						Math.random() * showcaseFolders.length,
+					);
+				} while (
+					newFolderIndex === currentFolderIndex &&
+					showcaseFolders.length > 1
+				);
 
-					squares.forEach((square) => {
-						const rect = square.getBoundingClientRect();
-						const squareCenter = rect.left + rect.width / 2;
-						const distanceFromCenter = Math.abs(
-							containerCenter - squareCenter,
-						);
+				currentFolderIndex = newFolderIndex;
+				const folder = showcaseFolders[currentFolderIndex];
 
-						if (distanceFromCenter < rect.width / 3) {
-							square.classList.add("in-view");
-						} else {
-							square.classList.remove("in-view");
-						}
-					});
+				// Get random image from that folder
+				const imageIndex = Math.floor(
+					Math.random() * folder.images.length,
+				);
+
+				return {
+					path: folder.images[imageIndex],
+					title: folder.title,
+					index: folder.index,
+					folderData: folder,
+				};
+			}
+
+			function changeImage() {
+				const imageData = getRandomImageFromFolder();
+				if (imageData) {
+					currentFolderData = imageData.folderData;
+
+					// Fade out image and title
+					carouselImage.style.opacity = "0";
+					imageTitle.classList.remove("show");
+
+					setTimeout(() => {
+						carouselImage.src = imageData.path;
+						imageTitle.textContent = imageData.title;
+
+						// Fade in image and title
+						carouselImage.style.opacity = "1";
+						setTimeout(() => {
+							imageTitle.classList.add("show");
+						}, 100);
+					}, 250);
 				}
+			}
 
-				// Update on scroll
-				container.addEventListener("scroll", updateCenteredSquare);
-				// Initial check
-				updateCenteredSquare();
+			function startSlideshow() {
+				// Add click event listener to carousel image
+				carouselImage.addEventListener("click", function () {
+					if (currentFolderData && currentFolderData.index) {
+						window.location.href = currentFolderData.index;
+					}
+				});
+
+				// Change image every 3 seconds
+				setInterval(changeImage, 5000);
+
+				// Set initial random image
+				changeImage();
 			}
 		</script>
-		<script>
-			(function () {
-				const heroImages = document.querySelectorAll(
-					".hero-carousel-section .hero-images img",
-				);
-				let current = 0;
-				function showNextImage() {
-					heroImages[current].classList.remove("active");
-					current = (current + 1) % heroImages.length;
-					heroImages[current].classList.add("active");
-				}
-				setInterval(showNextImage, 3000);
-			})();
-		</script>
-		<div class="model-section">
-			<model-viewer
-				src="models/model1.glb"
-				ar
-				camera-orbit="180deg 120deg 105%"
-				auto-rotate
-				shadow-intensity="1"
-				camera-controls
-				touch-action="pan-x"
-				loading="lazy"
-			></model-viewer>
-		</div>
-		<div class="model-section">
-			<model-viewer
-				src="models/model2.glb"
-				ar
-				camera-orbit="180deg 120deg 105%"
-				auto-rotate
-				shadow-intensity="1"
-				camera-controls
-				touch-action="pan-x"
-				loading="lazy"
-			></model-viewer>
-		</div>
-		<div class="model-section">
-			<model-viewer
-				src="models/model3.glb"
-				ar
-				camera-orbit="0deg 0deg 105%"
-				auto-rotate
-				shadow-intensity="1"
-				camera-controls
-				touch-action="pan-x"
-				loading="lazy"
-			></model-viewer>
-		</div>
-		<div class="model-section">
-			<model-viewer
-				src="models/model4.glb"
-				ar
-				camera-orbit="180deg 120deg 105%"
-				auto-rotate
-				shadow-intensity="1"
-				camera-controls
-				touch-action="pan-x"
-				loading="lazy"
-			></model-viewer>
-		</div>
-		<div class="model-section">
-			<model-viewer
-				src="models/model5.glb"
-				ar
-				camera-orbit="180deg 120deg 105%"
-				auto-rotate
-				shadow-intensity="1"
-				camera-controls
-				touch-action="pan-x"
-				loading="lazy"
-			></model-viewer>
-		</div>
-		<div class="model-section">
-			<model-viewer
-				src="models/model6.glb"
-				ar
-				camera-orbit="180deg 120deg 105%"
-				auto-rotate
-				shadow-intensity="1"
-				camera-controls
-				touch-action="pan-x"
-				loading="lazy"
-			></model-viewer>
-		</div>
 	</body>
 </html>
