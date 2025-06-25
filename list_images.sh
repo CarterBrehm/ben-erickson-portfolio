@@ -5,7 +5,7 @@ REPO_DIR="$(dirname -- "$0")"
 
 # Generate fresh image data
 generate_fresh_data() {
-    find "$REPO_DIR" -type f \( -name '*.jpg' -o -name '*.png' \) | \
+    find "$REPO_DIR" -type f \( -name '*.jpg' -o -name '*.png' -o -name '*.JPG' -o -name '*.PNG' \) | \
     sed "s|^$REPO_DIR/||" | \
     jq -Rn '
         reduce inputs as $item ({};

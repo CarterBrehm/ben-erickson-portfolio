@@ -1,24 +1,39 @@
 {
 	"folders": {
-		"sketches/Zombie project ": {
+		"commissions/boy2000": {
 			"images": [
-				"sketches/Zombie project /Untitled_Artwork 1.png",
-				"sketches/Zombie project /Untitled_Artwork 2.png",
-				"sketches/Zombie project /Untitled_Artwork 3.png",
-				"sketches/Zombie project /Untitled_Artwork 4.png",
-				"sketches/Zombie project /Untitled_Artwork 5.png",
-				"sketches/Zombie project /Untitled_Artwork 6.png",
-				"sketches/Zombie project /Untitled_Artwork 7.png",
-				"sketches/Zombie project /Untitled_Artwork 8.png",
-				"sketches/Zombie project /Untitled_Artwork 9.png",
-				"sketches/Zombie project /Untitled_Artwork(1).png",
-				"sketches/Zombie project /Untitled_Artwork.png"
+				"commissions/boy2000/IMG_1503.PNG",
+				"commissions/boy2000/IMG_1504.PNG",
+				"commissions/boy2000/IMG_1589.PNG",
+				"commissions/boy2000/IMG_1590.PNG",
+				"commissions/boy2000/IMG_1603.PNG",
+				"commissions/boy2000/IMG_1605.PNG",
+				"commissions/boy2000/bcover1.png",
+				"commissions/boy2000/bcover2.png"
+			],
+			"title": "Boy2000 Album Cover",
+			"index": "commissions/boy2000"
+		},
+		"sketches/Zombie project": {
+			"images": [
+				"sketches/Zombie project/Untitled_Artwork 1.png",
+				"sketches/Zombie project/Untitled_Artwork 2.png",
+				"sketches/Zombie project/Untitled_Artwork 3.png",
+				"sketches/Zombie project/Untitled_Artwork 4.png",
+				"sketches/Zombie project/Untitled_Artwork 5.png",
+				"sketches/Zombie project/Untitled_Artwork 6.png",
+				"sketches/Zombie project/Untitled_Artwork 7.png",
+				"sketches/Zombie project/Untitled_Artwork 8.png",
+				"sketches/Zombie project/Untitled_Artwork 9.png",
+				"sketches/Zombie project/Untitled_Artwork(1).png",
+				"sketches/Zombie project/Untitled_Artwork.png"
 			],
 			"title": "Zombie Project Sketches",
 			"index": "sketches/"
 		},
 		"sketches/Misc": {
 			"images": [
+				"sketches/Misc/IMG_1308.PNG",
 				"sketches/Misc/Untitled_Artwork 1(1).png",
 				"sketches/Misc/Untitled_Artwork 1.png",
 				"sketches/Misc/Untitled_Artwork 2.png",
@@ -31,6 +46,17 @@
 		},
 		"sketches/Footwear": {
 			"images": [
+				"sketches/Footwear/IMG_0851.PNG",
+				"sketches/Footwear/IMG_0979.PNG",
+				"sketches/Footwear/IMG_1011.PNG",
+				"sketches/Footwear/IMG_1228.PNG",
+				"sketches/Footwear/IMG_1229.PNG",
+				"sketches/Footwear/IMG_1233.PNG",
+				"sketches/Footwear/IMG_1234.PNG",
+				"sketches/Footwear/IMG_1315.PNG",
+				"sketches/Footwear/IMG_1322.PNG",
+				"sketches/Footwear/IMG_1323.PNG",
+				"sketches/Footwear/IMG_1324.PNG",
 				"sketches/Footwear/Untitled_Artwork 1(1).png",
 				"sketches/Footwear/Untitled_Artwork 1.png",
 				"sketches/Footwear/Untitled_Artwork 2(1).png",
@@ -46,31 +72,66 @@
 			"title": "Footwear Sketches",
 			"index": "sketches/"
 		},
-		"sketches/Mule project ": {
+		"sketches/Mule project": {
 			"images": [
-				"sketches/Mule project /Untitled_Artwork 1.png",
-				"sketches/Mule project /Untitled_Artwork 2.png",
-				"sketches/Mule project /Untitled_Artwork 3.png",
-				"sketches/Mule project /Untitled_Artwork 4.png",
-				"sketches/Mule project /Untitled_Artwork 5.png",
-				"sketches/Mule project /Untitled_Artwork 6.png",
-				"sketches/Mule project /Untitled_Artwork 7.png",
-				"sketches/Mule project /Untitled_Artwork.png"
+				"sketches/Mule project/Untitled_Artwork 1.png",
+				"sketches/Mule project/Untitled_Artwork 2.png",
+				"sketches/Mule project/Untitled_Artwork 3.png",
+				"sketches/Mule project/Untitled_Artwork 4.png",
+				"sketches/Mule project/Untitled_Artwork 5.png",
+				"sketches/Mule project/Untitled_Artwork 6.png",
+				"sketches/Mule project/Untitled_Artwork 7.png",
+				"sketches/Mule project/Untitled_Artwork.png"
 			],
 			"title": "Mule Project Sketches",
 			"index": "sketches/"
 		},
-		"sketches/Garmin project ": {
+		"sketches/Garmin project": {
 			"images": [
-				"sketches/Garmin project /Untitled_Artwork 1.png",
-				"sketches/Garmin project /Untitled_Artwork 2.png",
-				"sketches/Garmin project /Untitled_Artwork 3.png",
-				"sketches/Garmin project /Untitled_Artwork 4.png",
-				"sketches/Garmin project /Untitled_Artwork 5.png",
-				"sketches/Garmin project /Untitled_Artwork.png"
+				"sketches/Garmin project/Untitled_Artwork 1.png",
+				"sketches/Garmin project/Untitled_Artwork 2.png",
+				"sketches/Garmin project/Untitled_Artwork 3.png",
+				"sketches/Garmin project/Untitled_Artwork 4.png",
+				"sketches/Garmin project/Untitled_Artwork 5.png",
+				"sketches/Garmin project/Untitled_Artwork.png"
 			],
 			"title": "Garmin Project Sketches",
 			"index": "sketches/"
+		},
+		"sketches/Cotopaxi speaker project": {
+			"images": [
+				"sketches/Cotopaxi speaker project/IMG_0678.PNG",
+				"sketches/Cotopaxi speaker project/IMG_0679.PNG",
+				"sketches/Cotopaxi speaker project/IMG_0680.JPG",
+				"sketches/Cotopaxi speaker project/IMG_0681.JPG",
+				"sketches/Cotopaxi speaker project/IMG_0685.JPG",
+				"sketches/Cotopaxi speaker project/IMG_0686.JPG",
+				"sketches/Cotopaxi speaker project/IMG_0687.JPG",
+				"sketches/Cotopaxi speaker project/IMG_0688.JPG",
+				"sketches/Cotopaxi speaker project/IMG_0689.JPG",
+				"sketches/Cotopaxi speaker project/IMG_0690.JPG",
+				"sketches/Cotopaxi speaker project/IMG_0692.JPG"
+			],
+			"title": "Cotopaxi Speaker Sketches",
+			"index": "sketches/Cotopaxi speaker project"
+		},
+		"sketches/Torg bike bag project": {
+			"images": [
+				"sketches/Torg bike bag project/IMG_0747.JPG",
+				"sketches/Torg bike bag project/IMG_0748.JPG",
+				"sketches/Torg bike bag project/IMG_0750.JPG"
+			],
+			"title": "Torg Bike Bag Sketches",
+			"index": "sketches/Torg bike bag project"
+		},
+		"sketches/Canopy Drone System Project": {
+			"images": [
+				"sketches/Canopy Drone System Project/IMG_1885.PNG",
+				"sketches/Canopy Drone System Project/IMG_1886.PNG",
+				"sketches/Canopy Drone System Project/IMG_1887.PNG"
+			],
+			"title": "Canopy Drone System Project",
+			"index": "sketches/Canopy Drone System Sketches"
 		},
 		"sketches/Cars": {
 			"images": [
@@ -82,6 +143,47 @@
 			],
 			"title": "Cars",
 			"index": "sketches/"
+		},
+		"sketches/Insight 2 Design Nerf flashlight project": {
+			"images": [
+				"sketches/Insight 2 Design Nerf flashlight project/IMG_0563.PNG",
+				"sketches/Insight 2 Design Nerf flashlight project/IMG_0567.PNG",
+				"sketches/Insight 2 Design Nerf flashlight project/IMG_0584.PNG",
+				"sketches/Insight 2 Design Nerf flashlight project/IMG_0585.PNG",
+				"sketches/Insight 2 Design Nerf flashlight project/IMG_0586.PNG"
+			],
+			"title": "Insight 2 Design Nerf Flashlight Sketches",
+			"index": "sketches/Insight 2 Design Nerf flashlight project"
+		},
+		"personal-projects/Fighter jet": {
+			"images": [
+				"personal-projects/Fighter jet/IMG_1620.PNG",
+				"personal-projects/Fighter jet/f13.100.png",
+				"personal-projects/Fighter jet/f13again.bip.102.png",
+				"personal-projects/Fighter jet/jcover1.png",
+				"personal-projects/Fighter jet/jcover2.png"
+			],
+			"title": "Fighter Jet",
+			"index": "personal-projects/Fighter jet"
+		},
+		"personal-projects/Space ship 2": {
+			"images": [
+				"personal-projects/Space ship 2/IMG_1287.JPG",
+				"personal-projects/Space ship 2/IMG_1882.PNG",
+				"personal-projects/Space ship 2/scover1.png",
+				"personal-projects/Space ship 2/scover2.png"
+			],
+			"title": "Space Ship 2",
+			"index": "personal-projects/Space ship 2"
+		},
+		"personal-projects/Space ship 1": {
+			"images": [
+				"personal-projects/Space ship 1/IMG_1834.PNG",
+				"personal-projects/Space ship 1/scover1.png",
+				"personal-projects/Space ship 1/scover2.png"
+			],
+			"title": "Space Ship 1",
+			"index": "personal-projects/Space ship 1"
 		},
 		"showcase/A": {
 			"images": [
