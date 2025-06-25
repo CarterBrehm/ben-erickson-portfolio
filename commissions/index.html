@@ -127,7 +127,7 @@
 			document.querySelectorAll(".square").forEach((square) => {
 				const originalImage =
 					square.style.backgroundImage.match(/url\("([^"]+)"\)/)[1];
-				const hoverImage = originalImage.replace("s1", "s2");
+				const hoverImage = originalImage.replace("1", "2");
 
 				square.style.backgroundImage = ""; // Clear the direct background
 				square.style.setProperty("--image1", `url("${originalImage}")`);
