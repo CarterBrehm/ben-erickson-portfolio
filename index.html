@@ -334,6 +334,8 @@
 			let currentFolderIndex = 0;
 			let currentImageIndex = 0;
 			let currentFolderData = null;
+			let nextImageData = null;
+			let preloadedImage = null;
 			const carouselImage = document.getElementById("carousel-image");
 			const imageTitle = document.getElementById("image-title");
 
@@ -390,8 +392,17 @@
 				};
 			}
 
+			function preloadNextImage() {
+				nextImageData = getRandomImageFromFolder();
+				if (nextImageData) {
+					preloadedImage = new Image();
+					preloadedImage.src = nextImageData.path;
+				}
+			}
+
 			function changeImage() {
-				const imageData = getRandomImageFromFolder();
+				// Use preloaded image if available, otherwise get a new random image
+				const imageData = nextImageData || getRandomImageFromFolder();
 				if (imageData) {
 					currentFolderData = imageData.folderData;
 
@@ -408,6 +419,9 @@
 						setTimeout(() => {
 							imageTitle.classList.add("show");
 						}, 100);
+
+						// Preload the next image for smooth transitions
+						preloadNextImage();
 					}, 250);
 				}
 			}
@@ -420,11 +434,11 @@
 					}
 				});
 
-				// Change image every 3 seconds
-				setInterval(changeImage, 5000);
-
-				// Set initial random image
+				// Set initial random image and preload the next one
 				changeImage();
+
+				// Change image every 5 seconds
+				setInterval(changeImage, 5000);
 			}
 		</script>
 	</body>
